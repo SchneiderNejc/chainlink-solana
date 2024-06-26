@@ -11,6 +11,9 @@ pub mod chainlink_solana {
         let round = chainlink::latest_round_data(
             ctx.accounts.chainlink_program.to_account_info(),
             ctx.accounts.chainlink_feed.to_account_info())?;
+        let result_account = &mut ctx.accounts.result_account;
+        result_account.value = round.answer;
+        Ok(());
     }
 }
 
