@@ -22,4 +22,7 @@ describe("chainlink_solana", () => {
       signers: [resultAccount],
 
     });
+    const latestPrice = await program.account.resultAccount.fetch(resultAccount.publicKey);
+    console.log("Price is: " + latestPrice.value / 100_000_000)
+  })
 });
