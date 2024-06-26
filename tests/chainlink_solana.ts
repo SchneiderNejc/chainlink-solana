@@ -9,4 +9,17 @@ describe("chainlink_solana", () => {
   const provider = anchor.Provider.env()
   anchor.setProvider(provider)
   const program = anchor.workspace.chainlink_solana
+  it('Queries SOL/USD Price Feed', async() => {
+    const resultAccount = anchor.web3.Keypair.generate()
+    await program.rpc.execute({
+      accounts: {
+        resultAccount: resultAccount.publicKey,
+        user: anchor.getProvider.wallet.publicKey,
+        systemProgram: anchor.web3.SystemProgram.programId,
+        chainlinkFeed: CHAINLINK_FEED,
+        chainlinkProgram: CHAINLINK_PROGRAM_ID
+      },
+      signers: [resultAccount],
+
+    });
 });
