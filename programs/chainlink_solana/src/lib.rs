@@ -5,7 +5,7 @@ use chainlink_solana as chainlink;
 declare_id!("EK2GBtQ11PYpcoVUqQEA19VgU4NYektyd7SjbZawdBRt");
 
 #[program]
-pub mod chainlink_solana {
+pub mod chainlink_solana_app {
     use super::*;
     // Fetch the latest data from chainlink data feed
     public fn execute(ctx: Context<Execute>) -> ProgramResult{
