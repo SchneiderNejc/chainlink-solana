@@ -8,7 +8,7 @@ declare_id!("EK2GBtQ11PYpcoVUqQEA19VgU4NYektyd7SjbZawdBRt");
 pub mod chainlink_solana_app {
     use super::*;
     // Fetch the latest data from chainlink data feed
-    public fn execute(ctx: Context<Execute>) -> ProgramResult{
+    pub fn execute(ctx: Context<Execute>) -> ProgramResult {
         let round = chainlink::latest_round_data(
             ctx.accounts.chainlink_program.to_account_info(),
             ctx.accounts.chainlink_feed.to_account_info())?;
