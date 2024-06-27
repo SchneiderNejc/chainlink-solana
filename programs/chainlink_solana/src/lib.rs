@@ -14,7 +14,7 @@ pub mod chainlink_solana_app {
             ctx.accounts.chainlink_feed.to_account_info())?;
         let result_account = &mut ctx.accounts.result_account;
         result_account.value = round.answer;
-        Ok(());
+        Ok(())
     }
 }
 
