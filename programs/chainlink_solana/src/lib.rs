@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use chainlink_solana as chainlink
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("EK2GBtQ11PYpcoVUqQEA19VgU4NYektyd7SjbZawdBRt");
 
 #[program]
 pub mod chainlink_solana {
