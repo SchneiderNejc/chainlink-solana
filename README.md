@@ -9,3 +9,7 @@ solana airdrop 2 EK2GBtQ11PYpcoVUqQEA19VgU4NYektyd7SjbZawdBRt --url devnet
 
 cargo add solana-program@=1.14.18
 -fix error: package solana-program v1.18.0 cannot be built because it requires rustc 1.72.0 or newer, while the currently active rustc version is 1.68.0-dev
+
+solana address -k ./target/deploy/chaiunlink_solana-keypair.json
+-get program id
+
