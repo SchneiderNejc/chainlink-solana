@@ -1,5 +1,6 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
+use anchor_lang::solana_program::system_program;
 use chainlink_solana as chainlink;
 
 declare_id!("EK2GBtQ11PYpcoVUqQEA19VgU4NYektyd7SjbZawdBRt");
